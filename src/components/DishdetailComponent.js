@@ -1,6 +1,7 @@
 import { Card, CardImg, CardText, CardBody,
     CardTitle, Breadcrumb, BreadcrumbItem } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import CommentForm from './CommentForm'
 function RenderDish({ dish }) {
   
     if (dish != null)
@@ -33,8 +34,10 @@ function RenderComments({ comments }) {
                                     day: "2-digit",
                                 }
                             ).format(new Date(Date.parse(date)))}`}</p>
+                         
                         </li>
                     ))}
+                       <CommentForm/>
                 </ul>
             </div>
         );
